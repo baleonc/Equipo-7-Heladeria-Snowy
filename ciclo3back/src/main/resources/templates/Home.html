@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Inicio de sesion</title>
+    <link href="MainCss.css" rel="stylesheet" type="text/css"     
+    	th:href="@{/MainCss.css}"/>    
+</head>    
+<body>    
+    <h1 class="Header">HELADERIA SNOWY</h1>
+   	
+   	<img src="LogInImage.jpg" alt="Avatar" class="avatar" style="float: right" id="ImageOfLogIn">
+   	
+    <form action="/Home/LogIn/Menu" method="post">
+        <fieldset id="UserSignInForm">
+
+            <label for="SingInUser" class="UserAndPasswordLabel">Usuario:</label> <br />
+            <input type="text" name="userAcount" id="SingInUser" />
+            <br /> <br />
+
+            <label for="SingInPassword" class="UserAndPasswordLabel">Contraseña:</label>  <br />
+            <input type="password" name="password" id="SingInPassword" /> <br /> <br />
+
+            <input class="buttonSingIn"
+                   style="height: 15%; width: 60%" type="submit" value="Iniciar sesion" />
+        </fieldset>
+    </form>            
+</body>
+</html>

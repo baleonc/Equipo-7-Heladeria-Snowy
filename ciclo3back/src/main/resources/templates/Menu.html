@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Menu</title>
+    <link href="MainCss.css" rel="stylesheet" type="text/css" 
+    	th:href="@{/MainCss.css}"/>
+</head>
+<body>
+    
+    <h1 class="Header">HELADERIA SNOWY</h1>
+    
+    <!--Header-->
+    <div style="background:rgb(217 217 217);" class="SubHeaderButtons">
+    	<div style="float: left">    	    
+		    <a href="menu.html"  th:href="@{/Home/LogIn/Menu}">Menu</a>
+	    </div>
+		
+		<h2 class="LabelOfTypeOfModule">MENU</h2>
+			    
+	    <div style="float:right">
+		    <a href="menu.html" th:href="@{/Home/LogIn/Menu}">Perfil De Usuario</a>
+	    </div>
+    </div>
+    
+    <div class="MenuButtons">
+	    <form style="display:inline-table; padding-top: 1%"  
+	    	action="Menu" th:action="@{Menu/Module}" method="get">       	
+	        <input type="submit" name ="module" value="Usuarios"/>
+	        <input type="submit" name ="module" value="Clientes"/>
+	        <input type="submit" name ="module" value="Proveedores"/>
+	        <input type="submit" name ="module" value="Productos"/>
+	        <input type="submit" name ="module" value="Ventas"/>
+			<input type="submit" name ="module" value="Reportes"/>
+	    </form>
+    </div>
+</body>
+</html>

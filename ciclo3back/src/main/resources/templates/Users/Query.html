@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Usuarios</title>
+    <link href="MainCss.css" rel="stylesheet" type="text/css" 
+    		th:href="@{/MainCss.css}"/>
+</head>
+<body>    
+    <h1 class="Header">HELADERIA GENERICA</h1>
+        
+    <!--Header-->
+    <div style="background:rgb(217 217 217);" class="SubHeaderButtons">
+    	<div style="float: left">    	    
+		    <a href="menu.html"  th:href="@{/Home/LogIn/Menu}">Menu</a>
+	    </div>
+		
+		<h2 class="LabelOfTypeOfModule">USUARIOS</h2>
+			    
+	    <div style="float:right">
+		    <a href="menu.html" th:href="@{/Home/LogIn/Menu}">Perfil De Usuario</a>
+	    </div>
+    </div>
+    
+    <h4 class="InstructionOfForm">Some sample text</h4>
+
+    <form 
+    		th:object="${userToQuery}" method="post" style="margin-left:3%; margin-right: 3%">
+        <fieldset class="Form">
+            <legend class="InstructionOfForm" style="width: 15%"><span style="font-weight: 700">Datos de usuario</span></legend>
+            <label>
+                Cedula
+                <input style="width: 10%"
+                       type="text" name="cedula" th:value="*{cedulaUsuario}" readOnly="readonly"/>
+            </label>
+
+            <label>
+                Nombre Completo
+                <input style="width: 30%"
+                       type="text" name="nombreCompleto" th:value="*{nombreUsuario}" readOnly="readonly"/>
+            </label>
+
+            <label>
+                Email
+                <input style="width: 30%"
+                       type="email" name="email" th:value="*{emailUsuario}" readOnly="readonly"/>
+            </label>
+
+            <label class="UserAndPasswordLabel" style="margin-left: 2.8%">
+                Usuario:
+                <input style="width: 15%; margin-top: 3%"
+                       type="text" name="usuario" th:value="*{usuario}" readOnly="readonly"/>
+            </label> <br />
+
+            <label class="UserAndPasswordLabel">
+                Contraseña:
+                <input style="width: 15%; margin-top: 1%"
+                       type="password" name="password" th:value="*{password}" readOnly="readonly"/>
+            </label>
+        </fieldset>        	       		       		
+    </form>
+</body>
+</html>

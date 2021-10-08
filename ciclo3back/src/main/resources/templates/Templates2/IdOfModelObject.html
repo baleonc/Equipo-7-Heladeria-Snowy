@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Operaciones CRUD</title>
+<link href="MainCss.css" rel="stylesheet" type="text/css" 
+    		th:href="@{/MainCss.css}"/>
+</head>
+<body>
+<h4 th:text="${OperationCrudEs}" class="InstructionOfForm"></h4>
+
+<form action="OptionCrud/operation" th:action="@{OptionCRUD/{actionCRUD}(actionCRUD=${operationCrud})}" method="post">        
+	 <fieldset class="CrudButtons">     
+	     <label for="IdOfObject" class="UserAndPasswordLabel" 
+	     th:text="${instruccion}">
+	     </label> <br />
+	     <input type="text" name="dataToCrud" id="SingInUser" required="required"/> <br /> 
+	     <input type="submit" name="operation" id="SingInUser"  value="Guardar" th:value="${OperationCrudEs}"/>
+     </fieldset>
+</form>   
+</body>
+</html>

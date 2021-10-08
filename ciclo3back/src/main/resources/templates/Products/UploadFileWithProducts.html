@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Productos</title>
+    <link href="MainCss.css" rel="stylesheet" type="text/css" 
+    		th:href="@{/MainCss.css}"/>
+</head>
+<body>    
+    <h1 class="Header">HELADERIA GENERICA</h1>
+        
+    <!--Header-->
+    <div style="background:rgb(217 217 217);" class="SubHeaderButtons">
+    	<div style="float: left">    	    
+		    <a href="menu.html"  th:href="@{/Home/LogIn/Menu}">Menu</a>
+	    </div>
+		
+		<h2 class="LabelOfTypeOfModule">PRODUCTOS</h2>
+			    
+	    <div style="float:right">
+		    <a href="menu.html" th:href="@{/Home/LogIn/Menu}">Perfil De Usuario</a>
+	    </div>
+    </div>
+    
+    <h4 class="InstructionOfForm">Cargue en formato un archivo csv con los productos en formato
+    estandar esto es; sin los rotulos en las columnas y los decimales marcados por punto.
+    </h4>
+
+    <form action="OptionCRUD" th:action="@{Module/{module}(module=${module})}" 
+    		th:object="${administratorUser}" method="post" style="margin-left:3%; margin-right: 3%"
+    		enctype="multipart/form-data">
+        <fieldset class="Form">            
+            <label>
+                Productos:
+                <input style="width: 40%" type="file" name="Products"/>
+            </label>
+        </fieldset>
+       	<div class="MenuButtons">        	
+     			<input class="CrudButtons" style="width: 15%" type="submit" name="dataToCrud" value="Cargar"/>
+   		</div>       		
+    </form>
+</body>
+</html>

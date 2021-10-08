@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Vista CRUD objetos</title>
+<link href="MainCss.css" rel="stylesheet" type="text/css" 
+    		th:href="@{/MainCss.css}"/>
+</head>
+<body>
+<h4 class="InstructionOfForm">Elija la operacion a realizar</h4>
+<form action="Module/OptionCRUD" th:action="@{Module/{module}/OptionCRUD(module=${module})}" method="get">
+	<fieldset class="CrudButtons">
+		<label>
+			Guardar
+			<input type="radio" name="operation" value="Guardar" checked="checked"/> <br>
+		</label>
+		<label>	
+			Modificar
+		<input type="radio" name="operation" value="Modificar"/> <br>
+		</label>
+		<label>
+			Borrar
+			<input type="radio" name="operation" value="Borrar"/> <br>
+		</label>
+		<label>
+			Consultar
+			<input type="radio" name="operation" value="Consultar"/>
+		</label>
+	</fieldset>
+	<div class="MenuButtons">
+		<input style="width: 15%; margin-left: 3%; height:40%" type="submit" value="Elegir"/>
+	</div>
+</form>
+</body>
+</html>

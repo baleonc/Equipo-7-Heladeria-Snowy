@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Usuarios</title>
+    <link href="MainCss.css" rel="stylesheet" type="text/css" 
+    		th:href="@{/MainCss.css}"/>
+</head>
+<body>    
+    <h1 class="Header">HELADERIA GENERICA</h1>
+        
+    <!--Header-->
+    <div style="background:rgb(217 217 217);" class="SubHeaderButtons">
+    	<div style="float: left">    	    
+		    <a href="menu.html"  th:href="@{/Home/LogIn/Menu}">Menu</a>
+	    </div>
+		
+		<h2 class="LabelOfTypeOfModule">USUARIOS</h2>
+			    
+	    <div style="float:right">
+		    <a href="menu.html" th:href="@{/Home/LogIn/Menu}">Perfil De Usuario</a>
+	    </div>
+    </div>
+    
+    <h4 class="InstructionOfForm">Some sample text</h4>
+
+    <form action="OptionCRUD" th:action="@{Modify/{idOfObjectToModify}(idOfObjectToModify=${idOfObjectToModify})}"
+    		th:object="${userToModify}" method="post" style="margin-left:3%; margin-right: 3%">
+        <fieldset class="Form">
+            <legend class="InstructionOfForm" style="width:15%; font-weight:700" 
+            th:text="'Datos de' + ' ' + ${typeOfObjectEs}"></legend>
+            <label>
+                Cedula
+                <input style="width: 10%"
+                       type="text" name="cedulaUsuario" th:value="*{cedulaUsuario}"
+                       th:field="*{cedulaUsuario}"  readonly="readonly"/>
+            </label>
+
+            <label>
+                Nombre Completo
+                <input style="width: 30%"
+                       type="text" name="nombreUsuario" th:value="*{nombreUsuario}"
+                       th:field="*{nombreUsuario}"/>
+            </label>
+
+            <label>
+                Email
+                <input style="width: 30%"
+                       type="email" name="emailUsuario" th:value="*{emailUsuario}"
+                       th:field="*{emailUsuario}"/>
+            </label>
+
+            <label class="UserAndPasswordLabel" style="margin-left: 2.8%">
+                Usuario:
+                <input style="width: 15%; margin-top: 3%"
+                       type="text" name="usuario" th:value="*{usuario}"
+                       th:field="*{usuario}"/>
+            </label> <br />
+
+            <label class="UserAndPasswordLabel">
+                Contraseña:
+                <input style="width: 15%; margin-top: 1%"
+                       type="text" th:value="*{password}"
+                       th:field="*{password}"/>
+            </label>
+        </fieldset>  
+        	<div class="MenuButtons">      	
+       		<input class="CrudButtons" style="width: 15%" type="submit" value="Modificar"/>
+       		</div>       		
+    </form>
+</body>
+</html>
