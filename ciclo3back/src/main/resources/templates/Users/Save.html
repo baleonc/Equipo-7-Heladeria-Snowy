@@ -35,7 +35,8 @@
             <label>
                 Cedula
                 <input style="width: 10%"
-                       type="text" name="cedula" th:field="*{cedulaUsuario}" autofocus="autofocus"/>
+                       type="text" name="cedula" th:field="*{cedulaUsuario}" autofocus="autofocus"
+                       pattern="[0-9]+" title="Solo se permiten numeros" required="required"/>
             </label>
 
             <label>

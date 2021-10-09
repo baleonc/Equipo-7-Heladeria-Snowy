@@ -14,8 +14,7 @@ import javax.persistence.GenerationType;
 public class AdministratorUser 
 {		
 	
-	@NotNull
-	@Pattern(regexp="")
+	@NotNull	
 	@Id
 	private long cedulaUsuario;	
 	private String emailUsuario;
