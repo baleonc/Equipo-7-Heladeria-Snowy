@@ -56,7 +56,7 @@ public class LoginServlet
 	
 	/**This request manages login view
 	 * 
-	 * @return The view home which is the view into a user can log in
+	 * @return The view home which is the view a user can log in to
 	 */
 	@GetMapping("/Home")
 	public String index()
@@ -84,7 +84,7 @@ public class LoginServlet
 		}
 		else
 		{			
-			return "Home";
+			return "redirect:/Home";
 		}
 	}	
 }
