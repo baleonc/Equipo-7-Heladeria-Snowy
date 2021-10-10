@@ -27,5 +27,7 @@ public interface AdmUserRepository extends JpaRepository<AdministratorUser, Long
 	 * @param password
 	 * @return A generic class optional that wraps an optional value of type AdministratorUser
 	 */
-	public Optional<AdministratorUser> findByPassword(String password);
+	public Optional<AdministratorUser> findByPassword(String passwordIn);
+	
+	public Optional<AdministratorUser> findByUsuario(String usuarionIn);
 }
