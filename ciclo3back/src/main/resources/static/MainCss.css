@@ -31,6 +31,21 @@ body {
   	 
 }
 
+.SubHeaderButtons input{
+    display: inline-block;
+    background: rgb(205 153 153);        
+    border: 0;
+    font-size: 25px;
+    width:100%; 
+    height:36px; 
+    border-radius: 0px; 
+    text-decoration: underline;
+    text-align: center;
+    transition-duration: 0.4s;
+  	cursor: pointer;
+  	 
+}
+
 
 #UserSignInForm {    
     width: 30%;
@@ -155,9 +170,4 @@ body {
     text-align: center;  
     transition-duration: 0.4s;
   	cursor: pointer;
-}
-
-#ImageOfLogIn {
-	height: 50%;
-    width: 60%;
 }

@@ -18,10 +18,12 @@
 		    <a href="menu.html"  th:href="@{/Home/LogIn/Menu}">Menu</a>
 	    </div>
 		
-		<h2 class="LabelOfTypeOfModule">MENU</h2>
-			    
-	    <div style="float:right">
-		    <a href="menu.html" th:href="@{/Home/LogIn/Menu}">Perfil De Usuario</a>
+		<h2 class="LabelOfTypeOfModule">MENU</h2>			    
+	    
+	    <div style="float:right" class="SubHeaderButtons">
+	    	<form th:action="@{/logout}" method="post">	    	
+           		<input type="submit" value="Salir"/>           	
+       		</form>	
 	    </div>
     </div>
     

@@ -6,12 +6,12 @@ import org.slf4j.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
-import co.edu.unbosque.ciclo3back.JPAdataAccess.AdmUserRepository;
+
 import co.edu.unbosque.ciclo3back.JPAdataAccess.ClientRepository;
-import co.edu.unbosque.ciclo3back.model.AdministratorUser;
+
 import co.edu.unbosque.ciclo3back.model.Client;
 
 @SpringBootApplication
@@ -20,9 +20,9 @@ public class Ciclo3backApplication
 	
 	public static final Logger log = LoggerFactory.getLogger(Ciclo3backApplication.class);
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws Throwable 
 	{
-		SpringApplication.run(Ciclo3backApplication.class);		
+		SpringApplication.run(Ciclo3backApplication.class, args);		
 	}
 	
 	//Hola

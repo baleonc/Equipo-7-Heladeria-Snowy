@@ -1,15 +1,14 @@
 package co.edu.unbosque.ciclo3back.controller;
 
 
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+
+
 
 @Controller
 public class MenuServlet 
@@ -19,7 +18,7 @@ public class MenuServlet
 	 * 
 	 * @return
 	 */
-	@GetMapping("/Home/LogIn/Menu")
+	@RequestMapping("/Home/LogIn/Menu")
 	public String toMenu()
 	{
 		return "Menu";
@@ -58,7 +57,7 @@ public class MenuServlet
 		    				  break;		    
 								
 			case "Ventas": module = "Sellings";
-						   viewToReturn = "Sellings";
+						   viewToReturn = module + "/" + "Sellings";
 						   break;
 						   
 			case "Reportes": module = "Reports";

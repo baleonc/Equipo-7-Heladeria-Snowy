@@ -29,5 +29,11 @@ public interface AdmUserRepository extends JpaRepository<AdministratorUser, Long
 	 */
 	public Optional<AdministratorUser> findByPassword(String passwordIn);
 	
-	public Optional<AdministratorUser> findByUsuario(String usuarionIn);
+	
+	/**This method implements a way to get the user by "Usuario" field
+	 * 
+	 * @param usuarioIn A value of type String that is the user name in the table "usuarios" 
+	 * @return A generic class optional that wraps an optional value of type AdministratorUser
+	 */
+	public Optional<AdministratorUser> findByUsuario(String usuarioIn);
 }
